@@ -10,6 +10,7 @@ const kPrimaryGradientColor = LinearGradient(
 );
 
 const JPrimaryColor = Colors.cyanAccent;
+const LPrimaryColor = Colors.yellowAccent;
 
 
 const kSecondaryColor = Color(0xFF979797);
