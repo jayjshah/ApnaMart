@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:carousel_pro/carousel_pro.dart';
+import 'package:shop_app/screens/home/components/special_offers.dart';
 import '../../../size_config.dart';
 
 class DiscountBanner extends StatelessWidget {
@@ -9,33 +10,36 @@ class DiscountBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      // height: 90,
-      width: double.infinity,
-      margin: EdgeInsets.all(getProportionateScreenWidth(20)),
-      padding: EdgeInsets.symmetric(
-        horizontal: getProportionateScreenWidth(20),
-        vertical: getProportionateScreenWidth(15),
-      ),
-      decoration: BoxDecoration(
-        color: Color(0xFF4A3298),
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: Text.rich(
-        TextSpan(
-          style: TextStyle(color: Colors.white),
-          children: [
-            TextSpan(text: "A Summer Surpise\n"),
-            TextSpan(
-              text: "Cashback 20%",
-              style: TextStyle(
-                fontSize: getProportionateScreenWidth(24),
-                fontWeight: FontWeight.bold,
+    return  Column(
+      children: [
+        Padding(
+          padding:
+              EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
               ),
-            ),
-          ],
+        SizedBox(height: getProportionateScreenWidth(20)),
+        
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              SpecialOfferCard(
+               image: "assets/images/3062.jpg",
+                press: () {},
+              ),
+              SpecialOfferCard(
+                image: "assets/images/2118.jpg",
+                press: () {},
+              ),
+              SpecialOfferCard(
+                image: "assets/images/4282879.jpg",
+                press: () {},
+              ),
+              SizedBox(width: getProportionateScreenWidth(20)),
+            ],
+          ),
         ),
-      ),
+      ],
     );
+
   }
 }

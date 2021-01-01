@@ -49,9 +49,9 @@ class SpecialOffers extends StatelessWidget {
 class SpecialOfferCard extends StatelessWidget {
   const SpecialOfferCard({
     Key key,
-    @required this.category,
+    this.category,
     @required this.image,
-    @required this.numOfBrands,
+    this.numOfBrands,
     @required this.press,
   }) : super(key: key);
 
@@ -66,10 +66,10 @@ class SpecialOfferCard extends StatelessWidget {
       child: GestureDetector(
         onTap: press,
         child: SizedBox(
-          width: getProportionateScreenWidth(242),
-          height: getProportionateScreenWidth(100),
+          width: getProportionateScreenWidth(200),
+          height: getProportionateScreenWidth(80),
           child: ClipRRect(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(0),
             child: Stack(
               children: [
                 Image.asset(
@@ -93,21 +93,7 @@ class SpecialOfferCard extends StatelessWidget {
                     horizontal: getProportionateScreenWidth(15.0),
                     vertical: getProportionateScreenWidth(10),
                   ),
-                  child: Text.rich(
-                    TextSpan(
-                      style: TextStyle(color: Colors.white),
-                      children: [
-                        TextSpan(
-                          text: "$category\n",
-                          style: TextStyle(
-                            fontSize: getProportionateScreenWidth(18),
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        TextSpan(text: "$numOfBrands Brands")
-                      ],
-                    ),
-                  ),
+                 
                 ),
               ],
             ),
