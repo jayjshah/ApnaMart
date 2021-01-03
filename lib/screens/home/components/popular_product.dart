@@ -33,6 +33,7 @@ class PopularProducts extends StatelessWidget {
               SizedBox(width: getProportionateScreenWidth(20)),
             ],
           ),
+          
         )
       ],
     );
